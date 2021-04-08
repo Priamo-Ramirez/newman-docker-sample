@@ -1,0 +1,31 @@
+{
+  "name": "newman-docker-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run \"newman/collection.json\" --environment=\"newman/environment.json\" --reporters cli",
+    "test:Url": "newman run \"$npm_config_collection\" --environment=\"newman/environment.json\" --reporters cli",
+    "test:Urljunit": "newman run \"$npm_config_collection\" --environment=\"newman/environment.json\" --reporters cli,junitfull --reporter-junitfull-export 'newman-report.xml' -n 2"
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriamoHub/newman-docker-sample.git"
+  },
+  "keywords": [
+    "nemwan",
+    "docker",
+    "nodejs"
+  ],
+  "author": "Priamo Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriamoHub/newman-docker-sample/issues"
+  },
+  "homepage": "https://github.com/PriamoHub/newman-docker-sample#readme",
+  "devDependencies": {
+    "newman": "^5.2.2"
+  }
+}

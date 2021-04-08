@@ -1,0 +1,12 @@
+stages:
+  - test
+
+newman_tests:
+    stage: test
+    script:
+        - docker build -f Dockerfile -t priamo/newman .
+        - docker run -v $PWD:/etc/newman -t priamo/newman npm test
+    artifacts:
+      when: always
+      reports: 
+        junit: newman-report.xml
