@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "newman run \"newman/collection.json\" --environment=\"newman/environment.json\" --reporters cli",
+    "test": "newman run \"newman/collection.json\" --environment=\"newman/environment.json\" --reporters cli,junitfull --reporter-junitfull-export 'newman-report.xml'",
     "test:Url": "newman run \"$npm_config_collection\" --environment=\"newman/environment.json\" --reporters cli",
     "test:Urljunit": "newman run \"$npm_config_collection\" --environment=\"newman/environment.json\" --reporters cli,junitfull --reporter-junitfull-export 'newman-report.xml' -n 2"
 
