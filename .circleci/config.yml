@@ -9,4 +9,3 @@ jobs:
       - newman/newman-run:
           collection: ./newman/collection.json
           environment: ./newman/environment.json
-          timeout: '1000'  
